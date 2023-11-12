@@ -1,9 +1,9 @@
-*{
+* {
   font-family: Roboto;
 }
-:root{
-  --white-color:"#ffffff",
-  --black-color:"#000000",
-  --light-green-color:"#47b747",
-  --dark-green-color:"#02bb7d"
+:root {
+  --white-color: "#ffffff";
+  --black-color: "#000000";
+  --light-green-color: "#47b747";
+  --dark-green-color: "#02bb7d";
 }

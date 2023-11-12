@@ -1,0 +1,29 @@
+#logo-img {
+  width: 60%;
+  height: auto;
+  padding: 1rem 1rem 0 1rem;
+}
+.listItem {
+  cursor: pointer;
+  color: black;
+  padding-left: 1.5rem;
+}
+.selected {
+  background-color: #47b747;
+  color: white;
+}
+.unSelected {
+  background-color: white;
+  color: black;
+}
+.selected svg {
+  background-color: #47b747;
+  color: white;
+  cursor: pointer;
+}
+.unSelected svg {
+  color: black;
+}
+.listText {
+  text-decoration: none;
+}
