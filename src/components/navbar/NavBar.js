@@ -6,6 +6,7 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 export const NavBar = () => {
   return (
+    // Main AppBar component
     <AppBar
       position="static"
       sx={{
@@ -16,26 +17,31 @@ export const NavBar = () => {
         justifyContent: "center",
       }}
     >
+      {/* Toolbar for grouping elements */}
       <Toolbar>
+        {/* Search Bar */}
         <div
           style={{
             display: "flex inline",
             alignItems: "center",
-            marginLeft: "70vw",
+            marginLeft: "70vw", // Adjust the margin as needed
             backgroundColor: "#f6f7f9",
             borderRadius: "8px",
             height: "2rem",
           }}
         >
           <div style={{ position: "relative" }}>
+            {/* Search icon button */}
             <IconButton size="medium">
               <SearchIcon />
             </IconButton>
+            {/* Input field for search */}
             <InputBase inputProps={{ "aria-label": "search" }} />
           </div>
         </div>
 
-        <IconButton size="medium" sx={{ marginLeft: "2rem" }}>
+        {/* Notification icon */}
+        <IconButton size="medium " sx={{ marginLeft: "2rem" }}>
           <NotificationAddIcon
             sx={{
               color: "#101820",
@@ -44,9 +50,10 @@ export const NavBar = () => {
               position: "relative",
             }}
           />
+          {/* Notification indicator */}
           <div
             style={{
-              display: "inline",
+              display: "inline ",
               position: "absolute",
               backgroundColor: "#01b876",
               height: "10px",
@@ -58,18 +65,21 @@ export const NavBar = () => {
           ></div>
         </IconButton>
 
+        {/* User Avatar */}
         <IconButton size="medium">
           <Avatar
             sx={{ width: "1.5rem", height: "1.5rem", marginLeft: "2rem" }}
           >
+            {/* User Avatar Image */}
             <img
               src="https://cdn.pixabay.com/photo/2017/03/01/22/18/avatar-2109804_640.png"
-              alt="profile pic"
+              alt="profile pic" // Alt text for accessibility
               style={{ width: "50%", height: "auto" }}
             />
           </Avatar>
         </IconButton>
 
+        {/* Dropdown Arrow */}
         <IconButton size="medium">
           <ArrowDropDownIcon sx={{ fontSize: "x-large", color: "#101820" }} />
         </IconButton>
