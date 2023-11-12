@@ -1,4 +1,5 @@
 import React from "react";
+import "./NavBar.css";
 import { AppBar, Toolbar, InputBase, IconButton, Avatar } from "@mui/material";
 import NotificationAddIcon from "@mui/icons-material/NotificationAdd";
 import SearchIcon from "@mui/icons-material/Search";
@@ -20,17 +21,8 @@ export const NavBar = () => {
       {/* Toolbar for grouping elements */}
       <Toolbar>
         {/* Search Bar */}
-        <div
-          style={{
-            display: "flex inline",
-            alignItems: "center",
-            marginLeft: "70vw", // Adjust the margin as needed
-            backgroundColor: "#f6f7f9",
-            borderRadius: "8px",
-            height: "2rem",
-          }}
-        >
-          <div style={{ position: "relative" }}>
+        <div id="searchbar-container">
+          <div id="searchbar">
             {/* Search icon button */}
             <IconButton size="medium">
               <SearchIcon />
@@ -51,18 +43,7 @@ export const NavBar = () => {
             }}
           />
           {/* Notification indicator */}
-          <div
-            style={{
-              display: "inline ",
-              position: "absolute",
-              backgroundColor: "#01b876",
-              height: "10px",
-              width: "10px",
-              borderRadius: "10px",
-              top: "12px",
-              right: "6.5px",
-            }}
-          ></div>
+          <div id="icon-button"></div>
         </IconButton>
 
         {/* User Avatar */}

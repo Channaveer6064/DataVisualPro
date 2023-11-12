@@ -1,0 +1,22 @@
+#searchbar-container {
+  display: flex;
+  align-items: center;
+  margin-left: 70vw;
+  background-color: #f6f7f9;
+  border-radius: 0.5rem;
+
+  height: 2rem;
+}
+#searchbar {
+  position: relative;
+}
+#icon-button {
+  display: inline;
+  position: absolute;
+  background-color: #01b876;
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  top: 12px;
+  right: 6.6px;
+}
