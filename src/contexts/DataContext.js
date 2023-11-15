@@ -16,7 +16,7 @@ const dataReducer = (state, action) => {
 // Create the DataContext
 const DataContext = createContext();
 
-export const DataProvider = ({ children }) => {
+const DataProvider = ({ children }) => {
   // Use useReducer to manage state and dispatch actions
   const [state, dispatch] = useReducer(dataReducer, initialState);
 

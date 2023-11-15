@@ -85,16 +85,19 @@ const LineChart = () => {
       }}
     >
       {/* Header */}
-      <Stack
+      <Box
         height={"5rem"}
-        direction={"row"}
-        sx={{ justifyContent: "space-between", alignItems: "center" }}
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
       >
         <Typography variant="h6" mx={4}>
           Checking account
         </Typography>
         {/* Manage and Month buttons */}
-        <Stack flexDirection={"row"} mx={1}>
+        <Box mx={1}>
           <Button
             variant="contained"
             elevation={1}
@@ -126,8 +129,8 @@ const LineChart = () => {
           >
             Month
           </Button>
-        </Stack>
-      </Stack>
+        </Box>
+      </Box>
       <Divider />
       {/* SVG */}
       <svg ref={svgRef}></svg>
