@@ -35,6 +35,7 @@ const Sidebar = () => {
     <Drawer
       variant="permanent"
       sx={{
+        backgroundColor: "transparent",
         width: "15rem",
         flexShrink: 0,
         "& .MuiDrawer-paper": { width: "15rem", boxSizing: "border-box" },

@@ -11,11 +11,9 @@ export const NavBar = () => {
     <AppBar
       position="static"
       sx={{
-        display: "flex",
-        alignItems: "center",
-        backgroundColor: "white",
-        height: "5rem",
         justifyContent: "center",
+        backgroundColor: "#ffffff",
+        height: "6rem",
       }}
     >
       {/* Toolbar for grouping elements */}

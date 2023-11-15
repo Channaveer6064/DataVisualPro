@@ -2,10 +2,9 @@
 #searchbar-container {
   display: flex;
   align-items: center;
-  margin-left: 70vw;
+  margin-left: auto; /* Change from margin-left: 70vw; */
   background-color: #f6f7f9;
   border-radius: 0.5rem;
-
   height: 2rem;
 }
 /* Styles for the search bar input */
