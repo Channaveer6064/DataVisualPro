@@ -34,10 +34,13 @@ const Sidebar = () => {
   return (
     <Drawer
       variant="permanent"
+      elevation={0}
       sx={{
+        borderRight: "none",
         backgroundColor: "transparent",
         width: "15rem",
         flexShrink: 0,
+        "& .MuiDrawer-paper": { borderWidth: 0 },
         "& .MuiDrawer-paper": { width: "15rem", boxSizing: "border-box" },
       }}
     >
@@ -48,7 +51,7 @@ const Sidebar = () => {
             <Link
               to="/"
               style={{
-                marginBottom: "2rem",
+                marginBottom: "2.5rem",
                 textDecoration: "none",
                 color: "inherit",
               }}
@@ -66,6 +69,7 @@ const Sidebar = () => {
 
         {menuItems.map((item, index) => (
           <ListItem
+            sx={{ marginBottom: ".5rem" }}
             className={
               selectedItem === item.text
                 ? "selected listItem"

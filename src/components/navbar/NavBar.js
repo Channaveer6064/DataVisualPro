@@ -1,6 +1,13 @@
 import React from "react";
 import "./NavBar.css";
-import { AppBar, Toolbar, InputBase, IconButton, Avatar } from "@mui/material";
+import {
+  AppBar,
+  Toolbar,
+  InputBase,
+  IconButton,
+  Avatar,
+  Box,
+} from "@mui/material";
 import NotificationAddIcon from "@mui/icons-material/NotificationAdd";
 import SearchIcon from "@mui/icons-material/Search";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
@@ -14,24 +21,25 @@ export const NavBar = () => {
         justifyContent: "center",
         backgroundColor: "#ffffff",
         height: "6rem",
+        boxShadow: "none",
       }}
     >
       {/* Toolbar for grouping elements */}
       <Toolbar>
         {/* Search Bar */}
-        <div id="searchbar-container">
-          <div id="searchbar">
+        <Box id="searchbar-container">
+          <Box id="searchbar">
             {/* Search icon button */}
-            <IconButton size="medium">
+            <IconButton size="medium" disableRipple>
               <SearchIcon />
             </IconButton>
             {/* Input field for search */}
             <InputBase inputProps={{ "aria-label": "search" }} />
-          </div>
-        </div>
+          </Box>
+        </Box>
 
         {/* Notification icon */}
-        <IconButton size="medium " sx={{ marginLeft: "2rem" }}>
+        <IconButton size="medium " sx={{ marginLeft: "2rem" }} disableRipple>
           <NotificationAddIcon
             sx={{
               color: "#101820",
@@ -41,11 +49,11 @@ export const NavBar = () => {
             }}
           />
           {/* Notification indicator */}
-          <div id="icon-button"></div>
+          <Box id="icon-button"></Box>
         </IconButton>
 
         {/* User Avatar */}
-        <IconButton size="medium">
+        <IconButton size="medium" disableRipple>
           <Avatar
             sx={{ width: "1.5rem", height: "1.5rem", marginLeft: "2rem" }}
           >
@@ -59,7 +67,7 @@ export const NavBar = () => {
         </IconButton>
 
         {/* Dropdown Arrow */}
-        <IconButton size="medium">
+        <IconButton size="medium" disableRipple>
           <ArrowDropDownIcon sx={{ fontSize: "x-large", color: "#101820" }} />
         </IconButton>
       </Toolbar>
