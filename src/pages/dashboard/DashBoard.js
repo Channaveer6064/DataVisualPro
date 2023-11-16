@@ -3,6 +3,9 @@ import { NavBar } from "../../components/navbar/NavBar";
 import Sidebar from "../../components/sidebar/SideBar";
 import LineChart from "../../components/linechart/LineChart";
 import { Box, Grid } from "@mui/material";
+import { InvoicesOwedChart } from "../../components/barcharts/InvoicesOwedChart";
+import { CashFlowChart } from "../../components/barcharts/CashFlowChart";
+import { AccountsWatchList } from "../../components/accountWatchList/AccountWatchList";
 
 const DashBoard = () => {
   return (
@@ -34,14 +37,21 @@ const DashBoard = () => {
           spacing={2}
           sx={{
             flexGrow: 1,
-            marginTop: "2rem",
+            marginTop: "1rem",
             width: "100%",
-            // marginLeft: "2rem",
-            // overflow: "hidden",
           }}
         >
           <Grid item xs={12} md={6}>
             <LineChart />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <InvoicesOwedChart />
+          </Grid>
+          <Grid item xs={12} md={6} my={1}>
+            <CashFlowChart />
+          </Grid>
+          <Grid item xs={12} md={6} my={1}>
+            <AccountsWatchList />
           </Grid>
         </Grid>
       </Grid>
