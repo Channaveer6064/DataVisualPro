@@ -1,6 +1,7 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import DashBoard from "./pages/dashboard/DashBoard";
+import { AccountsWatchList } from "./components/accountsWatchList/AccountsWatchLis";
 
 function App() {
   return (

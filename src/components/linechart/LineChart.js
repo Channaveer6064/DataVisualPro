@@ -14,7 +14,7 @@ const LineChart = () => {
   // Function to create the line chart
   const createLineChart = () => {
     // Dimensions of the chart
-    const height = 270;
+    const height = 250;
     const width = 750;
 
     // Create SVG container
@@ -50,23 +50,6 @@ const LineChart = () => {
       .attr("stroke", "#47b747")
       .attr("stroke-width", "5px")
       .attr("fill", "none");
-
-    // Add x-axis label
-    svg
-      .append("text")
-      .attr("transform", `translate(${width / 2}, ${height + 40})`)
-      .style("text-anchor", "middle")
-      .text("X Axis Label");
-
-    // Add y-axis label
-    svg
-      .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 0 - 60)
-      .attr("x", 0 - height / 2)
-      .attr("dy", "1em")
-      .style("text-anchor", "middle")
-      .text("Y Axis Label");
   };
 
   // useEffect to run the createLineChart function on component mount
@@ -77,7 +60,7 @@ const LineChart = () => {
   return (
     <Box
       sx={{
-        height: "400px",
+        height: "380px",
         width: "780px",
         backgroundColor: "white",
         borderRadius: ".5rem",
@@ -135,7 +118,7 @@ const LineChart = () => {
       {/* SVG */}
       <svg ref={svgRef}></svg>
       {/* Bottom scale */}
-      <div style={{ marginLeft: "15px" }}>
+      <Box style={{ marginLeft: "15px" }}>
         {/* Axis labels */}
         {axisLabels.map((item, i) => (
           <span
@@ -143,7 +126,7 @@ const LineChart = () => {
             style={{ color: "#d3d3d3", marginRight: "74px" }}
           >{`0${item}`}</span>
         ))}
-      </div>
+      </Box>
     </Box>
   );
 };
