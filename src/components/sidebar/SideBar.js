@@ -16,12 +16,15 @@ import PersonIcon from "@mui/icons-material/Person";
 import ContactsIcon from "@mui/icons-material/Contacts";
 
 const Sidebar = () => {
+  // State to track the selected menu item
   const [selectedItem, setSelectedItem] = useState("Dashboard");
 
+  // Function to handle click on a menu item
   const handleItemClick = (itemName) => {
     setSelectedItem(itemName);
   };
 
+  // Array of menu items with their text, icon, and path
   const menuItems = [
     { text: "Dashboard", icon: <DashboardIcon />, path: "/" },
     { text: "Accounts", icon: <AccountBalanceWalletIcon />, path: "/" },
@@ -44,8 +47,9 @@ const Sidebar = () => {
         "& .MuiDrawer-paper": { width: "15rem", boxSizing: "border-box" },
       }}
     >
-      {" "}
+      {/* List containing the menu items */}
       <List>
+        {/* Logo */}
         <ListItem>
           <ListItemIcon>
             <Link
@@ -67,6 +71,7 @@ const Sidebar = () => {
           </ListItemIcon>
         </ListItem>
 
+        {/* Mapping through menu items to create list items */}
         {menuItems.map((item, index) => (
           <ListItem
             sx={{ marginBottom: ".5rem" }}
@@ -78,6 +83,7 @@ const Sidebar = () => {
             key={index}
             onClick={() => handleItemClick(item.text)}
           >
+            {/* Icon for the menu item */}
             <ListItemIcon
               className={
                 selectedItem === item.text
@@ -87,6 +93,7 @@ const Sidebar = () => {
             >
               {item.icon}
             </ListItemIcon>
+            {/* Link to the path with text for the menu item */}
             <Link
               className={
                 selectedItem === item.text

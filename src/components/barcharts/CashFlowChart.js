@@ -1,19 +1,42 @@
 import { Box, Divider, Stack, Typography } from "@mui/material";
 import React, { useEffect, useRef } from "react";
 import * as d3 from "d3";
+import { useData } from "../../contexts/DataContext";
 
 export const CashFlowChart = () => {
+  const { state } = useData();
+  const { cashInFlow, cashOutFlow, monthsData, selectedMonth } = state;
+
+  const generateMonthArray = (allMonths, thisMonth) => {
+    const selectedMonthIndex = allMonths.findIndex(
+      (month) => month === thisMonth
+    );
+
+    if (selectedMonthIndex === -1) {
+      return [];
+    }
+    {
+    }
+
+    const startIndex =
+      (selectedMonthIndex - 5 + allMonths.length) % allMonths.length;
+
+    const result = [];
+    for (let i = 0; i < 6; i++) {
+      const currentIndex = (startIndex + i) % allMonths.length;
+      result.push(allMonths[currentIndex]);
+    }
+
+    return result;
+  };
+
   const svgRef = useRef(null);
-  const monthData = [
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-    "January",
-  ];
-  const data = [100, 120, 180, 200, 190, 150];
-  const secondData = [75, 55, 66, 65, 56, 63];
+
+  // Generate the array of 6 months
+  const monthData = generateMonthArray(
+    monthsData.map((month) => month.name),
+    selectedMonth
+  );
 
   const createBarChart = () => {
     const height = 250;
@@ -29,7 +52,7 @@ export const CashFlowChart = () => {
     // Draw bars for the first set of data
     svg
       .selectAll(".firstBars")
-      .data(data)
+      .data(cashInFlow)
       .enter()
       .append("rect")
       .attr("class", "firstBars")
@@ -43,7 +66,7 @@ export const CashFlowChart = () => {
     // Draw bars for the second set of data
     svg
       .selectAll(".secondBars")
-      .data(secondData)
+      .data(cashOutFlow)
       .enter()
       .append("rect")
       .attr("class", "secondBars")
@@ -57,7 +80,7 @@ export const CashFlowChart = () => {
 
   useEffect(() => {
     createBarChart();
-  }, [data, secondData]);
+  }, [cashInFlow, cashOutFlow]);
 
   return (
     <Box
@@ -65,7 +88,7 @@ export const CashFlowChart = () => {
         height: "380px",
         width: "780px",
         backgroundColor: "white",
-        marginLeft: "2rem",
+        marginLeft: "3rem",
         borderRadius: ".5rem",
       }}
     >
@@ -74,12 +97,12 @@ export const CashFlowChart = () => {
         sx={{
           display: "flex",
           alignItems: "center",
-          height: "4rem",
+          height: "5rem",
           justifyContent: "space-between",
           padding: "0 1rem",
         }}
       >
-        Total cash flow <Typography variant="h6"></Typography>
+        <Typography variant="h6">Total cash flow </Typography>
         <Stack direction={"row"} spacing={1}>
           <Box
             sx={{
@@ -107,12 +130,23 @@ export const CashFlowChart = () => {
       </Box>
       <Divider />
       {/* svg for bargraph */}
-      <svg ref={svgRef} style={{ marginLeft: "1rem" }}></svg>
+      <svg
+        ref={svgRef}
+        style={{
+          marginLeft: "1rem",
+          marginTop: "20px",
+        }}
+      ></svg>
       {/* scale */}
-      <Box style={{ marginLeft: ".5rem", marginTop: "1rem" }}>
-        {" "}
+      <Box style={{ marginLeft: ".5rem", marginTop: "1rem", width: "100%" }}>
         {monthData.map((i, index) => (
-          <span key={index} style={{ marginRight: "4.7rem", color: "#d3d3d3" }}>
+          <span
+            key={index}
+            style={{
+              marginRight: i.length >= 8 ? "5rem" : "8rem",
+              color: "#d3d3d3",
+            }}
+          >
             {i}
           </span>
         ))}

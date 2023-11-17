@@ -30,7 +30,7 @@ export const NavBar = () => {
         <Box id="searchbar-container">
           <Box id="searchbar">
             {/* Search icon button */}
-            <IconButton size="medium" disableRipple>
+            <IconButton size="large" disableRipple>
               <SearchIcon />
             </IconButton>
             {/* Input field for search */}
@@ -39,7 +39,7 @@ export const NavBar = () => {
         </Box>
 
         {/* Notification icon */}
-        <IconButton size="medium " sx={{ marginLeft: "2rem" }} disableRipple>
+        <IconButton size="large " sx={{ marginLeft: "1.5rem" }} disableRipple>
           <NotificationAddIcon
             sx={{
               color: "#101820",
@@ -53,15 +53,13 @@ export const NavBar = () => {
         </IconButton>
 
         {/* User Avatar */}
-        <IconButton size="medium" disableRipple>
-          <Avatar
-            sx={{ width: "1.5rem", height: "1.5rem", marginLeft: "2rem" }}
-          >
+        <IconButton size="large" disableRipple>
+          <Avatar sx={{ width: "2rem", height: "2rem", marginLeft: "1.5rem" }}>
             {/* User Avatar Image */}
             <img
-              src="https://cdn.pixabay.com/photo/2017/03/01/22/18/avatar-2109804_640.png"
+              src="https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBvcnRyYWl0c3xlbnwwfHwwfHx8MA%3D%3D"
               alt="profile pic" // Alt text for accessibility
-              style={{ width: "50%", height: "auto" }}
+              style={{ width: "100%", height: "100%", borderRadius: "50%" }}
             />
           </Avatar>
         </IconButton>

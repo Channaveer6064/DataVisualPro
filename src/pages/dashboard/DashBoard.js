@@ -47,10 +47,10 @@ const DashBoard = () => {
           <Grid item xs={12} md={6}>
             <InvoicesOwedChart />
           </Grid>
-          <Grid item xs={12} md={6} my={1}>
+          <Grid item xs={12} md={6} my={2}>
             <CashFlowChart />
           </Grid>
-          <Grid item xs={12} md={6} my={1}>
+          <Grid item xs={12} md={6} my={2}>
             <AccountsWatchList />
           </Grid>
         </Grid>

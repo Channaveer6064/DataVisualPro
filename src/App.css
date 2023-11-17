@@ -1,9 +1,13 @@
+/* Apply default styling to all elements using the Roboto font-family and a font size of 14px */
 * {
   font-family: Roboto;
+  font-size: 14px;
 }
+
+/* Define CSS variables for color values using :root to set global variables */
 :root {
-  --white-color: "#ffffff";
-  --black-color: "#000000";
-  --light-green-color: "#47b747";
-  --dark-green-color: "#02bb7d";
+  --white-color: #ffffff; /* White color */
+  --black-color: #000000; /* Black color */
+  --light-green-color: #47b747; /* Light green color */
+  --dark-green-color: #02bb7d; /* Dark green color */
 }
