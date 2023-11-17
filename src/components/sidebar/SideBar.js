@@ -43,8 +43,11 @@ const Sidebar = () => {
         backgroundColor: "transparent",
         width: "15rem",
         flexShrink: 0,
-        "& .MuiDrawer-paper": { borderWidth: 0 },
-        "& .MuiDrawer-paper": { width: "15rem", boxSizing: "border-box" },
+        "& .MuiDrawer-paper": {
+          borderWidth: 0,
+          width: "15rem",
+          boxSizing: "border-box",
+        },
       }}
     >
       {/* List containing the menu items */}

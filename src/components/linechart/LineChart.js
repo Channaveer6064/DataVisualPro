@@ -87,7 +87,7 @@ const LineChart = () => {
 
   useEffect(() => {
     createLineChart();
-  }, [data]);
+  }, [checkingAccount]);
 
   return (
     <Box

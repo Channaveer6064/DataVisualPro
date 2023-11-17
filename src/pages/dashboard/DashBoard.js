@@ -2,7 +2,7 @@ import React from "react";
 import { NavBar } from "../../components/navbar/NavBar";
 import Sidebar from "../../components/sidebar/SideBar";
 import LineChart from "../../components/linechart/LineChart";
-import { Box, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import { InvoicesOwedChart } from "../../components/barcharts/InvoicesOwedChart";
 import { CashFlowChart } from "../../components/barcharts/CashFlowChart";
 import { AccountsWatchList } from "../../components/accountWatchList/AccountWatchList";
