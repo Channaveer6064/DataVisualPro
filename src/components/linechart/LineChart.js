@@ -43,6 +43,7 @@ const LineChart = () => {
 
   const svgRef = useRef();
   const data = checkingAccount.slice(selectedDays[0] - 1, selectedDays[1]);
+  console.log(data);
   const axisLabels = Array.from(
     { length: selectedDays[1] - selectedDays[0] + 1 },
     (_, i) => selectedDays[0] + i

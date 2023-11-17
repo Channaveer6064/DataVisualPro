@@ -56,7 +56,7 @@ export const InvoicesOwedChart = () => {
 
   useEffect(() => {
     createBarChart();
-  }, [invoicesOwed]);
+  }, [createBarChart]);
 
   return (
     <Box

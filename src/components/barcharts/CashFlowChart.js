@@ -15,8 +15,6 @@ export const CashFlowChart = () => {
     if (selectedMonthIndex === -1) {
       return [];
     }
-    {
-    }
 
     const startIndex =
       (selectedMonthIndex - 5 + allMonths.length) % allMonths.length;
