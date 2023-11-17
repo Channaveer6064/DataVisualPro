@@ -88,7 +88,7 @@ const LineChart = () => {
 
   useEffect(() => {
     createLineChart();
-  }, [checkingAccount]);
+  }, [checkingAccount, createLineChart, selectedDays]);
 
   return (
     <Box

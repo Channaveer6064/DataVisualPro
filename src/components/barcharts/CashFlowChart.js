@@ -78,7 +78,7 @@ export const CashFlowChart = () => {
 
   useEffect(() => {
     createBarChart();
-  }, [cashInFlow, cashOutFlow]);
+  }, [cashInFlow, cashOutFlow, createBarChart]);
 
   return (
     <Box
